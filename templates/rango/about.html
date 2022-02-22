@@ -12,6 +12,13 @@
         This tutorial has been put together by <strong>{{boldmessage}}</strong><br/>
     </div>
     <div>
+    {% if visits %}
+        <p>Visits: {{ visits }}</p>
+    {% else %}
+        No visits shows
+    {% endif %}
+    </div>
+    <div>
         <a href="{% url 'rango:index' %}">Index</a><br/>
         <img src="{% static 'images/rango.jpg' %}" alt="Picture of Rango" />
         <img src="{{ MEDIA_URL }}cat.jpg" alt="Picture of a Cat." />
